@@ -24,10 +24,10 @@
 	</property>
 	
 	</bean>
-	<!-- <bean
+	<bean
 		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
 	<bean
-		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" /> -->
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" /> 
 	
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 	<property name="basename" value="messages">
@@ -45,6 +45,8 @@
 		</bean>
 	</mvc:interceptors>
 	
-	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+	<property name="maxUploadSize" value="520642"></property>
+	</bean>
 </beans>
 
